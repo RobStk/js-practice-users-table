@@ -10,7 +10,7 @@ class UsersBrowser {
    * @param {HTMLTableElement} DOMTableForUsers   Users HTML table refrence.
    * @param {HTMLElement} DOMPaginationBar        Refrence to HTML Element containing pagination.
    * @param {Object} queryOpts                    API query options. Check your API for details.
-   * @param {Object} filtersIDs                   HTML IDs of filters inputs.
+   * @param {Object} filtersIDs                   HTML filters inputs IDs.
    * @returns {UsersBrowser}                      New UsersBrowser instance.
    */
   static async create(DOMSearchingForm, DOMTableForUsers, DOMPaginationBar, queryOpts, filtersIDs) {
@@ -19,12 +19,12 @@ class UsersBrowser {
   }
   /**
    * Constructor
-   * @param {UsersQuery} usersQuery             Object containing data of json-server query.
+   * @param {UsersQuery} usersQuery             json-server query data object.
    * @param {HTMLFormElement} DOMSearchingForm  DOM form element refrence.
    * @param {HTMLTableElement} DOMTableForUsers DOM table element refrence.
    * @param {HTMLElement} DOMPaginationBar      DOM pagination element refrence.
    * @param {Object} queryOpts                  API query options. Check your API for details.
-   * @param {Object} filtersIDs                 HTML IDs of filters inputs.
+   * @param {Object} filtersIDs                 HTML filters inputs IDs.
    * @returns {UsersBrowser}                    New instance of class.
    */
   constructor(usersQuery, DOMSearchingForm, DOMTableForUsers, DOMPaginationBar, queryOpts, filtersIDs) {
@@ -106,7 +106,6 @@ class UsersBrowser {
     this.#update();
   }
 
-  // Zaimplementować obsługę przypadków nieznalezienia elementów DOM
   #addSorting() {
     this.#disablePolyline();
     const ths = this.#DOMTable.querySelectorAll('th');

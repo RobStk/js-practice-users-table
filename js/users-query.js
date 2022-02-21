@@ -29,7 +29,7 @@ class UsersQuery {
     }
   }
   /**
-   * This constructor is called by static async .create function. You should not use it.
+   * This constructor is called by static async .create function. Do not use it.
    * @param {Object} responseData     Fetch result.
    * @param {Array<Object>} jsonData  Users array.
    * @param {Bool} isCreated          Flag to check if object is created by .create function.

@@ -9,7 +9,7 @@ class PaginationBar {
     return new PaginationBar(DOMPaginationBar, pages);
   }
   /**
-   * Constructor. It create pages wrapper in DOM and replaced its childrens to current.
+   * Constructor. It creates pages wrapper in DOM and replace its childrens to current.
    * @param {HTMLElement} DOMPaginationBar  DOM pagination element refrence.
    * @param {Object} pages                  Current pages data.
    */

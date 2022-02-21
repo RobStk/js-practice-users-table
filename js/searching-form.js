@@ -11,7 +11,7 @@ class SearchingForm {
   /**
    * SearchingForm constructor.
    * @param {HTMLFormElement} DOMSearchingForm  DOM form element refrence.
-   * @param {Object} filtersIDs                 HTML IDs of filters inputs.
+   * @param {Object} filtersIDs                 HTML filters inputs IDs.
    */
   constructor(DOMSearchingForm, filtersIDs) {
     this.#DOMSearchingForm = DOMSearchingForm;
