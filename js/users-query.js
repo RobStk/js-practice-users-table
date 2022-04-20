@@ -22,21 +22,20 @@ class UsersQuery {
         throw new Error(`Http error: ${responseData.status}`);
       }
       const jsonData = await responseData.json();
-      const isCreated = true;
-      return new UsersQuery(responseData, jsonData, isCreated);
+      return new UsersQuery(responseData, jsonData);
     } catch (error) {
       console.error(error);
     }
   }
+
   /**
    * This constructor is called by static async .create function. Do not use it.
    * @param {Object} responseData     Fetch result.
    * @param {Array<Object>} jsonData  Users array.
-   * @param {Bool} isCreated          Flag to check if object is created by .create function.
    * @returns {UsersQuery}            New instance of class.
    */
-  constructor(responseData, jsonData, isCreated) {
-    if (isCreated !== true) {
+  constructor(responseData, jsonData) {
+    if (!(responseData instanceof Object) || !(jsonData instanceof Array)) {
       return console.error('Instance of UsersQuery must be create by "create()" static async function.');
     }
     this.#usersArr = jsonData;
@@ -62,12 +61,14 @@ class UsersQuery {
       last: 1
     }
   }
+
   /**
    * @returns {Array<Object>}   Users array.
    */
   get usersArr() {
     return this.#usersArr;
   }
+
   /**
    * @returns {Object}   Current pages data.
    */

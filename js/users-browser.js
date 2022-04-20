@@ -4,6 +4,7 @@ import { PaginationBar } from "./pagination-bar.js";
 import { SearchingForm } from "./searching-form.js";
 
 class UsersBrowser {
+
   /**
    * Static async function creating new UsersBrowser instance.
    * @param {HTMLFormElement} DOMSearchingForm    Refrence to DOM form element.
@@ -17,6 +18,7 @@ class UsersBrowser {
     const usersQuery = await UsersQuery.create(queryOpts);
     return new UsersBrowser(usersQuery, DOMSearchingForm, DOMTableForUsers, DOMPaginationBar, queryOpts, filtersIDs);
   }
+
   /**
    * Constructor
    * @param {UsersQuery} usersQuery             json-server query data object.
@@ -47,6 +49,7 @@ class UsersBrowser {
     this.#DOMSearchingForm.addEventListener('reset', this.#reset.bind(this));
     this.#addSorting();
   }
+
   #queryOpts;
   #filtersIDs;
   #usersQuery;

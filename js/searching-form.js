@@ -1,4 +1,5 @@
 class SearchingForm {
+
   /**
    * Function exist only for standarization. You can use the constructor instead.
    * @param {HTMLFormElement} DOMSearchingForm  DOM form element refrence.
@@ -8,6 +9,7 @@ class SearchingForm {
   static async create(DOMSearchingForm, filtersIDs) {
     return new SearchingForm(DOMSearchingForm, filtersIDs);
   }
+
   /**
    * SearchingForm constructor.
    * @param {HTMLFormElement} DOMSearchingForm  DOM form element refrence.

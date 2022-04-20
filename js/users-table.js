@@ -1,4 +1,5 @@
 class UsersTable {
+
   /**
    * Function exist only for standarization. You can use the constructor instead.
    * @param {HTMLTableElement} usersDOMTable  DOM users table refrence.
@@ -8,6 +9,7 @@ class UsersTable {
   static async create(usersDOMTable, usersArr) {
     return new UsersTable(usersDOMTable, usersArr);
   }
+
   /**
    * UsersTable constructor.
    * @param {HTMLTableElement} usersDOMTable    DOM users table refrence.
@@ -18,6 +20,7 @@ class UsersTable {
     this.#usersArr = usersArr;
     this.#createTable();
   }
+
   /**
    * UsersTable properties.
    * @private

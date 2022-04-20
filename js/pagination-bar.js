@@ -1,4 +1,5 @@
 class PaginationBar {
+
   /**
    * Function exist only for standarization. You can use the constructor instead.
    * @param {HTMLElement} DOMPaginationBar  DOM pagination element refrence.
@@ -8,6 +9,7 @@ class PaginationBar {
   static async create(DOMPaginationBar, pages) {
     return new PaginationBar(DOMPaginationBar, pages);
   }
+
   /**
    * Constructor. It creates pages wrapper in DOM and replace its childrens to current.
    * @param {HTMLElement} DOMPaginationBar  DOM pagination element refrence.
@@ -73,6 +75,7 @@ class PaginationBar {
   get prevButton() {
     return this.#prevButton;
   }
+
   /**
    * @returns {HTMLElement} DOM next button element refrence.
    */
